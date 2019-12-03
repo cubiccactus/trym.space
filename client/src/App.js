@@ -17,7 +17,7 @@ const App = () => {
         <Switch>
           <Route exact path="/" children={Form} />
           <Route exact path="/about" children={About} />
-          <Route exact path="/editor" children={CodeEditorContainer} />
+          <Route path="/editor/*" children={CodeEditorContainer} />
         </Switch>
     </Router>
   );

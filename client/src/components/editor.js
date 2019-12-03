@@ -7,16 +7,16 @@ import "ace-builds/src-noconflict/theme-xcode";
 
 const sampleCode = 'const a = 5;';
 
-const SnippetEditor = () => {
+const SnippetEditor = ({ sampleCode, onchange }) => {
     return <AceEditor
       // mode="css"
       theme="xcode"
       fontSize={20}
       placeholder="type code here"
-      onChange={() => {}}
+      onChange={onchange}
       name="UNIQUE_ID_OF_DIV"
       editorProps={{ $blockScrolling: true }}
-      // value={sampleCode}
+      value={sampleCode}
     />;
 };
 
